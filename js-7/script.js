@@ -26,9 +26,13 @@ form.addEventListener("submit", function (elem) {
         return;
     }
 
+   
+
     if (editIndex === null) {
 
         users.push({ name, email })
+
+
 
     }
     else {
@@ -37,14 +41,17 @@ form.addEventListener("submit", function (elem) {
 
         editIndex = null;
 
-        btn.textContent = "Add User"
     }
+  
+
+    
 
 
 
     localStorage.setItem("users", JSON.stringify(users))
 
     renderUsers();
+
 
     form.reset();
 
@@ -65,15 +72,16 @@ function renderUsers() {
             
                <p>Name: ${user.name}</p
 
-               <p>Email: ${user.email}</p
+               <p>Email: ${user.email}</p>
 
-              <button onclick="editUser(${index})">Edit</button>
+              <button onclick="editUser(${index})">Update</button>
               <button onclick="userDelete(${index})">Delete</button>
             
             `
              output.appendChild(div1)
 
         
+            btn.textContent = "Add User"
 
 
     });
@@ -89,12 +97,19 @@ function renderUsers() {
 
  }
 
+
  function editUser(index){
 
-    let name = document.getElementById("name")
+    let name = document.getElementById("name").value = users[index].name
+    let email = document.getElementById("email").value = users[index].email
 
-     let email = document.getElementById("email")
+    editIndex = index
+
+
+
+    btn.textContent = "Upadte User"
 
 
  }
 
+ 
