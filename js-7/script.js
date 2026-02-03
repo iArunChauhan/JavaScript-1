@@ -13,27 +13,27 @@ let editIndex = null;
 
 renderUsers()
 
-form.addEventListener("submit", function(elem){
+form.addEventListener("submit", function (elem) {
 
-     elem.preventDefault();
+    elem.preventDefault();
 
     let name = document.getElementById("name").value
 
     let email = document.getElementById("email").value
 
-    if(name==="" || email===""){
-            
-         return;
+    if (name === "" || email === "") {
+
+        return;
     }
 
-    if(editIndex===null){
+    if (editIndex === null) {
 
-        users.push({name,email})
-    
+        users.push({ name, email })
+
     }
-    else{
+    else {
 
-        users[editIndex] = {name,email}
+        users[editIndex] = { name, email }
 
         editIndex = null;
 
@@ -50,9 +50,51 @@ form.addEventListener("submit", function(elem){
 
 })
 
-function renderUsers(){
+function renderUsers() {
 
-    
+    output.innerHTML = ""
+
+
+    users.forEach((user, index) => {
+
+        const div1 = document.createElement("div")
+
+        div1.className = "card"
+
+        div1.innerHTML = `
+            
+               <p>Name: ${user.name}</p
+
+               <p>Email: ${user.email}</p
+
+              <button onclick="editUser(${index})">Edit</button>
+              <button onclick="userDelete(${index})">Delete</button>
+            
+            `
+             output.appendChild(div1)
+
+        
+
+
+    });
 }
+ function userDelete(index){
 
+
+    users.splice(index,1)
+
+    localStorage.setItem("users", JSON.stringify(users));
+
+    renderUsers();
+
+ }
+
+ function editUser(index){
+
+    let name = document.getElementById("name")
+
+     let email = document.getElementById("email")
+
+
+ }
 

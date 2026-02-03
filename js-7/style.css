@@ -6,3 +6,86 @@
     box-sizing: border-box;
 }
 
+
+
+
+form {
+    background: #ffffff;
+    padding: 20px;
+    
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+form input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+
+#output {
+
+  
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.card {
+     background-color: lightcoral;
+    padding: 15px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+
+.card button {
+    margin-right: 10px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.card button:first-of-type {
+    background: #ffc107;
+    color: #000;
+}
+
+.card button:first-of-type:hover {
+    background: #e0a800;
+}
+
+.card button:last-of-type {
+    
+    color: #fff;
+}
