@@ -26,7 +26,7 @@ form.addEventListener("submit", function (elem) {
         return;
     }
 
-   
+
 
     if (editIndex === null) {
 
@@ -42,9 +42,9 @@ form.addEventListener("submit", function (elem) {
         editIndex = null;
 
     }
-  
 
-    
+
+
 
 
 
@@ -76,29 +76,32 @@ function renderUsers() {
 
               <button onclick="editUser(${index})">Update</button>
               <button onclick="userDelete(${index})">Delete</button>
+
+               <button onclick="searchUser(${index})">Search</button>
+              
             
             `
-             output.appendChild(div1)
+        output.appendChild(div1)
 
-        
-            btn.textContent = "Add User"
+
+        btn.textContent = "Add User"
 
 
     });
 }
- function userDelete(index){
+function userDelete(index) {
 
 
-    users.splice(index,1)
+    users.splice(index, 1)
 
     localStorage.setItem("users", JSON.stringify(users));
 
     renderUsers();
 
- }
+}
 
 
- function editUser(index){
+function editUser(index) {
 
     let name = document.getElementById("name").value = users[index].name
     let email = document.getElementById("email").value = users[index].email
@@ -110,6 +113,15 @@ function renderUsers() {
     btn.textContent = "Upadte User"
 
 
- }
+}
 
- 
+function searchUser(index) {
+
+    let foundUsers = users.filter(user => user.email === email);
+
+   
+    btn.textContent = "Search User"
+
+}
+
+
