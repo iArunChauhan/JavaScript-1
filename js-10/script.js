@@ -1,6 +1,6 @@
 
 
-let fruits = ["Apple", "Orange", "Banana", "Lichi", "Blackberry"]
+let fruits = ["Apple","Mango", "Orange", "Banana", "Lichi", "Blackberry"]
 
 let lists = document.getElementById("list")
 
