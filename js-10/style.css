@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#main-container {
+    height:100vh;
+    width:100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: #e0e0e0;
+}
+
+#search-container {
+  width: 600px;
+  height: 100px;
+  background: color #e0e0e0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:5rem;
+}
+
+input {
+  padding: 8px 12px;
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 40px;
+  font-size: 18px; 
+}
+
+
+input::placeholder {
+  font-size: 18px;
+  letter-spacing:2px;
+  font-weight: bold;
+  color: #333;
+}
+
+input:focus {
+  outline: none;
+}
+
+
+hr {
+  width: 80%;
+  border: none;
+  border-top: 5px solid gray;
+  border-radius:40px;
+  margin-top: 10px;
+}
+
+.fruits-list{
+
+  display:none;
+
+}
